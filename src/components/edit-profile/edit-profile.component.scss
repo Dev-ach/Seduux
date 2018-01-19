@@ -1,0 +1,74 @@
+.genrpadding{
+    padding: auto;
+}
+.bodyspan{
+    text-align: center;
+}
+input[name="gender"] {
+    display: none;
+	&[value="male"]:checked {
+		~ .genderIcon {
+            border: .2em solid #9822DB;
+			transform: rotate(45deg);
+			&:before {
+                opacity: 1; visibility: visible;
+                background: #9822DB;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0; left: 50%;
+				transform: translate(-50%, -1.2em);
+				border: .35em solid transparent ;
+				border-bottom-color: #9822DB;
+			}
+		}
+	}
+	&[value="female"]:checked{
+		~ .genderIcon {
+            border: .2em solid #DE0580;
+			transform: rotate(180deg);
+			&:before {
+                opacity: 1; visibility: visible;
+                background:#DE0580;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: .5em; height: .2em;
+				top: 0; left: 50%;
+				background: #DE0580;
+                transform: translate(-50%, -.5em);
+			}
+		}
+	}
+}
+.genderIcon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border: .2em solid #575656;
+	border-radius: 50%;
+	position: relative;
+	transition: transform .3s;
+	vertical-align: bottom;
+    margin: 0 .3em;
+	&:before {
+		content: '';
+		display: block;
+		width: .2em; height: .7em;
+		background: #575656;
+		position: absolute;
+		bottom: 100%;
+		left: calc(50% - .1em);
+		opacity: 0; visibility: hidden;
+		transition: transform .3s;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+}

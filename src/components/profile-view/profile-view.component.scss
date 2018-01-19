@@ -1,0 +1,107 @@
+/*
+* profile
+*/
+
+.profile{
+  width: 460px;
+  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, .14), 0 1px 20px 0 rgba(0, 0, 0, .12), 0 3px 10px -2px rgba(0, 0, 0, .2);
+  padding: 8rem 0 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.profile:before{
+  content: "";
+  width: 85px;
+  height: 50px;
+  
+  transition: transform .5s cubic-bezier(0.42, 0.04, 0.13, 0.92);
+  border-radius: 50%;
+  background-color: #B316B7;
+
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%) scale(7);
+}
+
+.profile:hover:before{
+  transition: transform .7s cubic-bezier(0.66, 0.09, 0, 1.31);
+}
+
+.profile:hover:before{
+    transform: translateX(-50%) translateY(200%) scale(25);
+}
+
+.profile:hover, .profile:hover .profile__value{
+  color: #fff;
+}
+
+.profile:hover .profile__group, .profile:hover .profile__avatar, .profile:hover .profile__social{
+  border-color: #fff;
+}
+
+.profile:hover .profile__row{
+  background-color: #9822DB;  
+}
+
+.profile__header{
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.profile__avatar{
+  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  border: 6px solid #B316B7;
+  transition: border-color .4s ease-out .1s;
+}
+
+.profile:hover .profile__avatar{
+  transition: border-color .4s ease-out .2s;
+}
+  
+.profile__name{
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 3.5rem;
+  transition: color .4s ease-out .1s;
+}
+
+
+
+
+
+/*
+* demo styles
+*/
+
+
+
+
+
+
+
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.demo{
+  flex-grow: 2;
+}
+
+.main-container{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

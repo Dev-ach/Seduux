@@ -1,0 +1,10 @@
+<ion-searchbar [(ngModel)]="query" (ionChange)="searchUser(query)"></ion-searchbar>
+
+<ion-list *ngIf="profileList?.length > 0">
+    <ion-item *ngFor="let profile of profileList" (click)="selectProfile(profile)">
+        <ion-avatar item-left>
+            <img src="assets/img/Avatar-h.png" alt="avatar">
+        </ion-avatar>
+        <h2>{{profile.prenom}} {{profile.nom}}</h2>
+    </ion-item>
+</ion-list>

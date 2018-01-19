@@ -1,0 +1,31 @@
+
+
+<div *ngIf="userProfile">
+  <div class="page">
+    <div class="demo">
+      <div class="main-container">
+        <article class="profile">
+          <header class="profile__header">
+            <img src="http://stas-melnikov.ru/cliparts/stas.jpg" class="profile__avatar">
+            <h3 class="profile__name">{{userProfile.prenom}} {{userProfile.nom}}</h3>
+          </header>
+      </article>
+      </div>
+      <ion-item padding>
+        <ion-icon name="md-male" item-start large></ion-icon>
+        <ion-input type="text" [value]="userProfile.gendre" [readonly]="true" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="md-calendar" item-start large></ion-icon>
+        <ion-input type="text" [value]="userProfile.dateNaissance" [readonly]="true" ></ion-input>
+      </ion-item>
+      
+    </div> 
+  </div>
+</div>
+
+
+
+  
+
+ 

@@ -1,0 +1,37 @@
+<ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="bodyspan">
+            <label for="maleGender">Male</label>
+            <input id="maleGender" type="radio" name="gender" value="male" [(ngModel)]="profile.gendre"/>
+            <input id="femaleGender" type="radio" name="gender" value="female" [(ngModel)]="profile.gendre"/>
+            <i class="genderIcon"></i>
+            <label for="femaleGender">Female</label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Nom</ion-label>
+          <ion-input type="text" [(ngModel)]="profile.nom"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Prenom</ion-label>
+          <ion-input type="text" [(ngModel)]="profile.prenom"></ion-input>
+        </ion-item>
+         <ion-item>
+          <ion-label floating>Date de naissance</ion-label>
+          <ion-datetime displayformat="DD/MM/YYYY" [(ngModel)]="profile.dateNaissance"></ion-datetime>
+        </ion-item>
+      </ion-col>
+          
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="cbut">
+          <button ion-button small round class="gradient" (click)="saveProfile()">ENREGISTRER</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

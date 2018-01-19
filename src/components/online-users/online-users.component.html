@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item-divider>Utilisateur on ligne</ion-item-divider>
+  <ion-item *ngFor="let user of userList | async" (click)="openChat(user)">
+    <ion-avatar item-left>
+      <img src="assets/img/avatar-h.png" alt="avatar">
+    </ion-avatar>
+    <h2>{{user.prenom}} {{user.nom}}</h2>
+  </ion-item>
+</ion-list> 
